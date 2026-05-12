@@ -1,60 +1,244 @@
 {
-  "id": "strichka-2026",
-  "name": "Strichka 2026",
-  "timezone": "Europe/Kyiv",
-  "stages": [
-    { "id": "closer",         "name": "Closer" },
-    { "id": "dvir",           "name": "Dvir" },
-    { "id": "garden",         "name": "Garden" },
-    { "id": "third-floor",    "name": "3rd Floor" },
-    { "id": "otel",           "name": "Otel'" },
-    { "id": "mezzanine",      "name": "Mezzanine" },
-    { "id": "lisnyi-prychal", "name": "Lisnyi Prychal" }
-  ],
-  "days": [
-    {
-      "id": "day1",
-      "label": "Day 1 — Sat 16 May",
-      "date": "2026-05-16",
-      "startHour": 9,
-      "endHour": 23,
-      "stages": ["closer", "dvir", "garden", "third-floor", "otel", "mezzanine"]
-    },
-    {
-      "id": "day2",
-      "label": "Day 2 — Sun 17 May",
-      "date": "2026-05-17",
-      "startHour": 9,
-      "endHour": 23,
-      "stages": ["dvir", "otel", "garden", "third-floor", "lisnyi-prychal"]
-    }
-  ],
-  "performances": [
-    { "id": "d1-closer-1", "artist": "T.Fain (Vinaya)",        "stageId": "closer", "dayId": "day1", "country": "UA", "start": "2026-05-16T14:00:00+03:00", "end": "2026-05-16T17:00:00+03:00" },
-    { "id": "d1-closer-2", "artist": "Ion Ludwig",             "stageId": "closer", "dayId": "day1", "country": "NL", "live": true, "start": "2026-05-16T17:00:00+03:00", "end": "2026-05-16T20:00:00+03:00" },
-    { "id": "d1-closer-3", "artist": "Amir & Oleh",            "stageId": "closer", "dayId": "day1", "country": "UA", "start": "2026-05-16T20:00:00+03:00", "end": "2026-05-16T23:00:00+03:00" },
-
-    { "id": "d1-garden-1", "artist": "Nota Yanvarska & Haathi","stageId": "garden", "dayId": "day1", "country": "UA", "start": "2026-05-16T14:00:00+03:00", "end": "2026-05-16T18:00:00+03:00" },
-    { "id": "d1-garden-2", "artist": "PlusStepper",            "stageId": "garden", "dayId": "day1", "country": "UA", "start": "2026-05-16T18:00:00+03:00", "end": "2026-05-16T20:00:00+03:00" },
-    { "id": "d1-garden-3", "artist": "Oles",                   "stageId": "garden", "dayId": "day1", "country": "UA", "start": "2026-05-16T20:00:00+03:00", "end": "2026-05-16T23:00:00+03:00" },
-
-    { "id": "d1-3f-1", "artist": "Gapon",                      "stageId": "third-floor", "dayId": "day1", "country": "UA", "start": "2026-05-16T14:00:00+03:00", "end": "2026-05-16T16:30:00+03:00" },
-    { "id": "d1-3f-2", "artist": "Alexis Le-Tan (Full Circle)","stageId": "third-floor", "dayId": "day1", "country": "FR", "start": "2026-05-16T16:30:00+03:00", "end": "2026-05-16T20:00:00+03:00" },
-    { "id": "d1-3f-3", "artist": "Roman K",                    "stageId": "third-floor", "dayId": "day1", "country": "UA", "start": "2026-05-16T20:00:00+03:00", "end": "2026-05-16T23:00:00+03:00" },
-
-    { "id": "d1-mezz-1", "artist": "Paul Thompson",            "stageId": "mezzanine", "dayId": "day1", "country": "GB", "start": "2026-05-16T14:00:00+03:00", "end": "2026-05-16T17:00:00+03:00" },
-    { "id": "d1-mezz-2", "artist": "Igor Glushko",             "stageId": "mezzanine", "dayId": "day1", "country": "UA", "start": "2026-05-16T17:00:00+03:00", "end": "2026-05-16T19:00:00+03:00" },
-    { "id": "d1-mezz-3", "artist": "Gee Lane",                 "stageId": "mezzanine", "dayId": "day1", "country": "VE", "start": "2026-05-16T19:00:00+03:00", "end": "2026-05-16T21:30:00+03:00" },
-    { "id": "d1-mezz-4", "artist": "Seba Korecky with NOTA CLÜB", "stageId": "mezzanine", "dayId": "day1", "country": "UA", "live": true, "start": "2026-05-16T21:30:00+03:00", "end": "2026-05-16T23:00:00+03:00" },
-
-    { "id": "d2-garden-1", "artist": "Udjin",                  "stageId": "garden", "dayId": "day2", "country": "UA", "start": "2026-05-17T13:00:00+03:00", "end": "2026-05-17T16:30:00+03:00" },
-    { "id": "d2-garden-2", "artist": "Veryval",                "stageId": "garden", "dayId": "day2", "country": "UA", "start": "2026-05-17T16:30:00+03:00", "end": "2026-05-17T19:30:00+03:00" },
-    { "id": "d2-garden-3", "artist": "WiELOROMAN",             "stageId": "garden", "dayId": "day2", "country": "UA", "start": "2026-05-17T19:30:00+03:00", "end": "2026-05-17T23:00:00+03:00" },
-
-    { "id": "d2-lp-1", "artist": "Ochii",                      "stageId": "lisnyi-prychal", "dayId": "day2", "country": "UA", "start": "2026-05-17T10:00:00+03:00", "end": "2026-05-17T13:00:00+03:00" },
-    { "id": "d2-lp-2", "artist": "Maxime dB",                  "stageId": "lisnyi-prychal", "dayId": "day2", "country": "FR", "start": "2026-05-17T13:00:00+03:00", "end": "2026-05-17T16:00:00+03:00" },
-    { "id": "d2-lp-3", "artist": "Borys",                      "stageId": "lisnyi-prychal", "dayId": "day2", "country": "UA", "start": "2026-05-17T16:00:00+03:00", "end": "2026-05-17T18:30:00+03:00" },
-    { "id": "d2-lp-4", "artist": "Thongvor",                   "stageId": "lisnyi-prychal", "dayId": "day2", "country": "UA", "live": true, "start": "2026-05-17T18:30:00+03:00", "end": "2026-05-17T19:30:00+03:00" },
-    { "id": "d2-lp-5", "artist": "Tau Car",                    "stageId": "lisnyi-prychal", "dayId": "day2", "country": "FR", "start": "2026-05-17T19:30:00+03:00", "end": "2026-05-17T23:00:00+03:00" }
-  ]
+    "id": "strichka-2026",
+    "name": "Strichka 2026",
+    "timezone": "Europe/Kyiv",
+    "stages": [
+        {
+            "id": "closer",
+            "name": "Closer"
+        },
+        {
+            "id": "dvir",
+            "name": "Dvir"
+        },
+        {
+            "id": "garden",
+            "name": "Garden"
+        },
+        {
+            "id": "third-floor",
+            "name": "3rd Floor"
+        },
+        {
+            "id": "otel",
+            "name": "Otel'"
+        },
+        {
+            "id": "mezzanine",
+            "name": "Mezzanine"
+        },
+        {
+            "id": "lisnyi-prychal",
+            "name": "Lisnyi Prychal"
+        }
+    ],
+    "days": [
+        {
+            "id": "day1",
+            "label": "Day 1 — Sat 16 May",
+            "date": "2026-05-16",
+            "startHour": 13,
+            "endHour": 23,
+            "stages": ["closer", "dvir", "garden", "third-floor", "otel", "mezzanine"]
+        },
+        {
+            "id": "day2",
+            "label": "Day 2 — Sun 17 May",
+            "date": "2026-05-17",
+            "startHour": 9,
+            "endHour": 23,
+            "stages": ["dvir", "otel", "garden", "third-floor", "lisnyi-prychal"]
+        }
+    ],
+    "performances": [
+        {
+            "id": "d1-closer-1",
+            "artist": "T.Fain (Vinaya)",
+            "stageId": "closer",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T17:00:00+03:00"
+        },
+        {
+            "id": "d1-closer-2",
+            "artist": "Ion Ludwig",
+            "stageId": "closer",
+            "dayId": "day1",
+            "country": "NL",
+            "live": true,
+            "start": "2026-05-16T17:00:00+03:00",
+            "end": "2026-05-16T20:00:00+03:00"
+        },
+        { "id": "d1-closer-3",
+            "artist": "Amir & Oleh",
+            "stageId": "closer",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T20:00:00+03:00",
+            "end": "2026-05-16T23:00:00+03:00"
+        },
+        
+        { "id": "d1-garden-1",
+            "artist": "Nota Yanvarska & Haathi",
+            "stageId": "garden",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T18:00:00+03:00"
+        },
+        { "id": "d1-garden-2",
+            "artist": "PlusStepper",
+            "stageId": "garden",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T18:00:00+03:00",
+            "end": "2026-05-16T20:00:00+03:00"
+        },
+        { "id": "d1-garden-3",
+            "artist": "Oles",
+            "stageId": "garden",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T20:00:00+03:00",
+            "end": "2026-05-16T23:00:00+03:00"
+        },
+        {
+            "id": "d1-3f-1",
+            "artist": "Gapon",
+            "stageId": "third-floor",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T16:30:00+03:00"
+        },
+        {
+            "id": "d1-3f-2",
+            "artist": "Alexis Le-Tan (Full Circle)",
+            "stageId": "third-floor",
+            "dayId": "day1",
+            "country": "FR",
+            "start": "2026-05-16T16:30:00+03:00",
+            "end": "2026-05-16T20:00:00+03:00"
+        },
+        {
+            "id": "d1-3f-3",
+            "artist": "Roman K",
+            "stageId": "third-floor",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T20:00:00+03:00",
+            "end": "2026-05-16T23:00:00+03:00"
+        },
+        {
+            "id": "d1-mezz-1",
+            "artist": "Paul Thompson",
+            "stageId": "mezzanine",
+            "dayId": "day1",
+            "country": "GB",
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T17:00:00+03:00"
+        },
+        {
+            "id": "d1-mezz-2",
+            "artist": "Igor Glushko",
+            "stageId": "mezzanine",
+            "dayId": "day1",
+            "country": "UA",
+            "start": "2026-05-16T17:00:00+03:00",
+            "end": "2026-05-16T19:00:00+03:00"
+        },
+        {
+            "id": "d1-mezz-3",
+            "artist": "Gee Lane",
+            "stageId": "mezzanine",
+            "dayId": "day1",
+            "country": "VE",
+            "start": "2026-05-16T19:00:00+03:00",
+            "end": "2026-05-16T21:30:00+03:00"
+        },
+        {
+            "id": "d1-mezz-4",
+            "artist": "Seba Korecky with NOTA CLÜB",
+            "stageId": "mezzanine",
+            "dayId": "day1",
+            "country": "UA",
+            "live": true,
+            "start": "2026-05-16T21:30:00+03:00",
+            "end": "2026-05-16T23:00:00+03:00"
+        },
+        {
+            "id": "d2-garden-1",
+            "artist": "Udjin",
+            "stageId": "garden",
+            "dayId": "day2",
+            "country": "UA",
+            "start": "2026-05-17T13:00:00+03:00",
+            "end": "2026-05-17T16:30:00+03:00"
+        },
+        {
+            "id": "d2-garden-2",
+            "artist": "Veryval",
+            "stageId": "garden",
+            "dayId": "day2",
+            "country": "UA",
+            "start": "2026-05-17T16:30:00+03:00",
+            "end": "2026-05-17T19:30:00+03:00"
+        },
+        {
+            "id": "d2-garden-3",
+            "artist": "WiELOROMAN",
+            "stageId": "garden",
+            "dayId": "day2",
+            "country": "UA",
+            "start": "2026-05-17T19:30:00+03:00",
+            "end": "2026-05-17T23:00:00+03:00"
+        },
+        {
+            "id": "d2-lp-1",
+            "artist": "Ochii",
+            "stageId": "lisnyi-prychal",
+            "dayId": "day2",
+            "country": "UA",
+            "start": "2026-05-17T10:00:00+03:00",
+            "end": "2026-05-17T13:00:00+03:00"
+        },
+        {
+            "id": "d2-lp-2",
+            "artist": "Maxime dB",
+            "stageId": "lisnyi-prychal",
+            "dayId": "day2",
+            "country": "FR",
+            "start": "2026-05-17T13:00:00+03:00",
+            "end": "2026-05-17T16:00:00+03:00"
+        },
+        {
+            "id": "d2-lp-3",
+            "artist": "Borys",
+            "stageId": "lisnyi-prychal",
+            "dayId": "day2",
+            "country": "UA",
+            "start": "2026-05-17T16:00:00+03:00",
+            "end": "2026-05-17T18:30:00+03:00"
+        },
+        {
+            "id": "d2-lp-4", "artist":
+            "Thongvor",
+            "stageId": "lisnyi-prychal",
+            "dayId": "day2",
+            "country": "UA",
+            "live": true,
+            "start": "2026-05-17T18:30:00+03:00",
+            "end": "2026-05-17T19:30:00+03:00"
+        },
+        {
+            "id": "d2-lp-5",
+            "artist": "Tau Car",
+            "stageId": "lisnyi-prychal",
+            "dayId": "day2",
+            "country": "FR",
+            "start": "2026-05-17T19:30:00+03:00",
+            "end": "2026-05-17T23:00:00+03:00"
+        }
+    ]
 }
