@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f0f12" />
+    <title>Strichka 2026 — Schedule</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <h1 class="topbar__title" id="festival-title">Festival</h1>
+        <div class="topbar__clock" id="kyiv-clock" aria-live="off">--:--</div>
+      </div>
+      <nav class="daytabs" id="daytabs" role="tablist" aria-label="Festival days"></nav>
+    </header>
+
+    <main class="schedule" id="schedule" aria-label="Schedule">
+      <div class="schedule__error" id="schedule-error" hidden></div>
+      <div class="schedule__viewport" id="schedule-viewport">
+        <div class="schedule__grid" id="schedule-grid"></div>
+      </div>
+    </main>
+
+    <button type="button" class="now-chip" id="now-chip" hidden>
+      <span class="now-chip__dot" aria-hidden="true"></span>
+      Now
+    </button>
+
+    <dialog class="details" id="details">
+      <form method="dialog" class="details__form">
+        <header class="details__head">
+          <h2 class="details__artist" id="details-artist"></h2>
+          <button type="submit" class="details__close" aria-label="Close" value="cancel">&times;</button>
+        </header>
+        <dl class="details__facts">
+          <div class="details__fact">
+            <dt>Stage</dt>
+            <dd id="details-stage"></dd>
+          </div>
+          <div class="details__fact">
+            <dt>When</dt>
+            <dd id="details-time"></dd>
+          </div>
+          <div class="details__fact" id="details-country-row" hidden>
+            <dt>Country</dt>
+            <dd id="details-country"></dd>
+          </div>
+          <div class="details__fact" id="details-live-row" hidden>
+            <dt>Format</dt>
+            <dd><span class="details__live-badge">LIVE</span></dd>
+          </div>
+        </dl>
+        <button type="button" class="details__star" id="details-star" aria-pressed="false">
+          <span class="details__star-icon" aria-hidden="true">★</span>
+          <span class="details__star-label" id="details-star-label">Want to listen</span>
+        </button>
+      </form>
+    </dialog>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
