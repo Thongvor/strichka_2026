@@ -8,7 +8,6 @@ import { nowInstant, dayStartInstant, dayEndInstant } from './time.js';
 
 const els = {
   title: document.getElementById('festival-title'),
-  clock: document.getElementById('kyiv-clock'),
   daytabs: document.getElementById('daytabs'),
   grid: document.getElementById('schedule-grid'),
   viewport: document.getElementById('schedule-viewport'),
@@ -73,7 +72,6 @@ async function boot() {
     getActiveDay: () => festival.days.find((d) => d.id === activeDayId),
     viewport: els.viewport,
     chip: els.chip,
-    clockEl: els.clock,
   });
 }
 
