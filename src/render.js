@@ -80,6 +80,11 @@ function buildTimeCol(day) {
     tick.textContent = `${String(h).padStart(2, '0')}:00`;
     col.appendChild(tick);
   }
+  const pill = document.createElement('div');
+  pill.className = 'now-time';
+  pill.id = 'now-time';
+  pill.hidden = true;
+  col.appendChild(pill);
   return col;
 }
 
@@ -178,9 +183,6 @@ function buildNowLine() {
   line.className = 'now-line';
   line.id = 'now-line';
   line.hidden = true;
-  const dot = document.createElement('span');
-  dot.className = 'now-line__dot';
-  line.appendChild(dot);
   return line;
 }
 

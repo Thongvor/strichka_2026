@@ -16,6 +16,14 @@ const PERF_TIME_FORMATTER = new Intl.DateTimeFormat('en-GB', {
 
 let nowSource = () => new Date();
 
+const debugNow = new URLSearchParams(window.location.search).get('now');
+if (debugNow) {
+  let normalized = debugNow.replace(/ /g, '+');
+  if (!/Z$|[+-]\d{2}:?\d{2}$/.test(normalized)) normalized += '+03:00';
+  const fixed = new Date(normalized);
+  if (!isNaN(fixed.valueOf())) nowSource = () => fixed;
+}
+
 export function setNowSource(fn) {
   nowSource = fn || (() => new Date());
 }

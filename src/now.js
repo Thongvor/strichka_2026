@@ -2,7 +2,7 @@ import { nowInstant, minutesSinceDayStart, pxFromMinutes, kyivClockText } from '
 
 const TICK_MS = 30_000;
 
-export function startNowLoop({ festival, getActiveDay, viewport, chip, clockEl }) {
+export function startNowLoop({ festival, getActiveDay, viewport, chip }) {
   let intersectionObserver = null;
   let chipScrollTarget = null;
   let lastLineId = null;
@@ -22,10 +22,10 @@ export function startNowLoop({ festival, getActiveDay, viewport, chip, clockEl }
 
   function tick() {
     const now = nowInstant();
-    if (clockEl) clockEl.textContent = kyivClockText(now);
 
     const day = getActiveDay();
     const line = document.getElementById('now-line');
+    const pill = document.getElementById('now-time');
     if (line && line !== lastLineId) {
       attachChipObserver(line);
       lastLineId = line;
@@ -49,6 +49,7 @@ export function startNowLoop({ festival, getActiveDay, viewport, chip, clockEl }
 
     if (!day || !line) {
       if (line) line.hidden = true;
+      if (pill) pill.hidden = true;
       chip.hidden = true;
       return;
     }
@@ -56,12 +57,19 @@ export function startNowLoop({ festival, getActiveDay, viewport, chip, clockEl }
     const minutes = minutesSinceDayStart(festival, day, now);
     if (minutes == null) {
       line.hidden = true;
+      if (pill) pill.hidden = true;
       chip.hidden = true;
       return;
     }
 
+    const y = pxFromMinutes(minutes);
     line.hidden = false;
-    line.style.transform = `translateY(${pxFromMinutes(minutes)}px)`;
+    line.style.transform = `translateY(${y}px)`;
+    if (pill) {
+      pill.textContent = kyivClockText(now);
+      pill.style.transform = `translateY(calc(${y}px - 50%))`;
+      pill.hidden = false;
+    }
   }
 
   chip.addEventListener('click', () => {
