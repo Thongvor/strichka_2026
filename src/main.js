@@ -7,7 +7,6 @@ import { createFavorites } from './favorites.js';
 import { nowInstant, dayStartInstant, dayEndInstant } from './time.js';
 
 const els = {
-  title: document.getElementById('festival-title'),
   daytabs: document.getElementById('daytabs'),
   grid: document.getElementById('schedule-grid'),
   viewport: document.getElementById('schedule-viewport'),
@@ -32,7 +31,6 @@ boot().catch((err) => {
 
 async function boot() {
   const festival = await loadFestival(ACTIVE_FESTIVAL);
-  els.title.textContent = festival.name;
   document.title = `${festival.name} — Schedule`;
 
   const favorites = createFavorites(festival.id);

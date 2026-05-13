@@ -115,7 +115,7 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   const endMinFromMidnight = startMinutesInKyiv(end);
 
   const top = pxFromMinutes(startMinFromMidnight - dayStartMin);
-  const height = Math.max(24, pxFromMinutes(endMinFromMidnight - startMinFromMidnight));
+  const height = Math.max(24, pxFromMinutes(endMinFromMidnight - startMinFromMidnight) - 1);
 
   const block = document.createElement('button');
   block.type = 'button';
