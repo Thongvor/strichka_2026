@@ -133,7 +133,8 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   head.appendChild(star);
   block.appendChild(head);
 
-  if (perf.live || perf.country) {
+  const showCountry = perf.country && perf.country !== 'UA';
+  if (perf.live || showCountry) {
     const tags = document.createElement('div');
     tags.className = 'block__tags';
     if (perf.live) {
@@ -142,7 +143,7 @@ function buildBlock(perf, day, onBlockClick, favorites) {
       live.textContent = 'LIVE';
       tags.appendChild(live);
     }
-    if (perf.country) {
+    if (showCountry) {
       const country = document.createElement('span');
       country.className = 'block__tag block__tag--country';
       country.textContent = perf.country;
