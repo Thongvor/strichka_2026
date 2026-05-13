@@ -239,6 +239,102 @@
             "country": "FR",
             "start": "2026-05-17T19:30:00+03:00",
             "end": "2026-05-17T23:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-1",
+            "artist": "tofudj",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T15:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-2",
+            "artist": "Khrystyna Kirik",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T15:00:00+03:00",
+            "end": "2026-05-16T16:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-3",
+            "artist": "Tongi Joi",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T16:00:00+03:00",
+            "end": "2026-05-16T17:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-4",
+            "artist": "ÄSC3EA",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T17:00:00+03:00",
+            "end": "2026-05-16T18:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-5",
+            "artist": "Shadow Unit",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T18:00:00+03:00",
+            "end": "2026-05-16T19:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-6",
+            "artist": "Pymin",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T19:00:00+03:00",
+            "end": "2026-05-16T20:00:00+03:00"
+        },
+        {
+            "id": "d1-dvir-7",
+            "artist": "ecce lizard",
+            "stageId": "dvir",
+            "dayId": "day1",
+            "start": "2026-05-16T20:00:00+03:00",
+            "end": "2026-05-16T23:00:00+03:00"
+        },
+        {
+            "id": "d2-dvir-1",
+            "artist": "Kadiristy",
+            "stageId": "dvir",
+            "dayId": "day2",
+            "start": "2026-05-17T13:00:00+03:00",
+            "end": "2026-05-17T14:00:00+03:00"
+        },
+        {
+            "id": "d2-dvir-2",
+            "artist": "Trent",
+            "stageId": "dvir",
+            "dayId": "day2",
+            "country": "IT",
+            "start": "2026-05-17T14:00:00+03:00",
+            "end": "2026-05-17T17:30:00+03:00"
+        },
+        {
+            "id": "d2-dvir-3",
+            "artist": "Serge Jazzmate & Béllis",
+            "stageId": "dvir",
+            "dayId": "day2",
+            "start": "2026-05-17T17:30:00+03:00",
+            "end": "2026-05-17T20:00:00+03:00"
+        },
+        {
+            "id": "d2-dvir-4",
+            "artist": "Lena Willikens",
+            "stageId": "dvir",
+            "dayId": "day2",
+            "country": "DE",
+            "start": "2026-05-17T20:00:00+03:00",
+            "end": "2026-05-17T23:00:00+03:00"
         }
     ]
 }
