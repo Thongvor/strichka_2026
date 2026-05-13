@@ -47,6 +47,18 @@ body {
   position: fixed;
   inset: 0;
 }
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/motifs.png');
+  background-size: 1200px auto;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.22;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
 
 button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
 
