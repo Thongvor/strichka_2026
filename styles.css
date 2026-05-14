@@ -46,18 +46,23 @@ body {
   -webkit-font-smoothing: antialiased;
   position: fixed;
   inset: 0;
+  isolation: isolate;
 }
 body::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image: url('./assets/motifs.png');
-  background-size: 1200px auto;
+  background-size: 560px auto;
   background-repeat: repeat;
-  background-position: center;
-  opacity: 0.22;
+  background-position: top left;
+  opacity: 0.28;
   pointer-events: none;
   mix-blend-mode: screen;
+  z-index: 0;
+}
+@media (min-width: 720px) {
+  body::before { background-size: 900px auto; }
 }
 
 button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
