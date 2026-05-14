@@ -1,13 +1,6 @@
 export const HOUR_PX = 76;
 
-const KYIV_FORMATTER = new Intl.DateTimeFormat('en-GB', {
-  timeZone: 'Europe/Kyiv',
-  hour12: false,
-  hour: '2-digit',
-  minute: '2-digit',
-});
-
-const PERF_TIME_FORMATTER = new Intl.DateTimeFormat('en-GB', {
+const KYIV_HHMM = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'Europe/Kyiv',
   hour12: false,
   hour: '2-digit',
@@ -24,20 +17,23 @@ if (debugNow) {
   if (!isNaN(fixed.valueOf())) nowSource = () => fixed;
 }
 
-export function setNowSource(fn) {
-  nowSource = fn || (() => new Date());
-}
-
 export function nowInstant() {
   return nowSource();
 }
 
 export function kyivClockText(date = nowInstant()) {
-  return KYIV_FORMATTER.format(date);
+  return KYIV_HHMM.format(date);
 }
 
 export function formatKyivTime(date) {
-  return PERF_TIME_FORMATTER.format(date);
+  return KYIV_HHMM.format(date);
+}
+
+export function kyivHourMinute(date) {
+  const parts = KYIV_HHMM.formatToParts(date);
+  const hour = Number(parts.find((p) => p.type === 'hour').value);
+  const minute = Number(parts.find((p) => p.type === 'minute').value);
+  return { hour, minute };
 }
 
 function offsetFromIso(iso) {

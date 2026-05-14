@@ -5,7 +5,6 @@
   --brand-strong: rgba(241, 65, 8, 0.7);
   --c-cream: #FEDFB5;
   --c-mint: #67CFBE;
-  --c-lavender: #D8C4FA;
   --bg-base: #0c0807;
   --bg-elev: #1a1410;
   --bg-elev-2: #241b15;
@@ -28,13 +27,12 @@
 html, body {
   margin: 0; padding: 0; height: 100%;
   color: var(--text);
-  overscroll-behavior: none;
 }
 html {
   background-color: var(--bg-base);
   background-image:
     linear-gradient(rgba(12, 8, 7, 0.85), rgba(12, 8, 7, 0.85)),
-    url('./assets/bg.png');
+    url('./assets/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,34 +46,7 @@ body {
   inset: 0;
   isolation: isolate;
 }
-body::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('./assets/motifs-brick.png');
-  background-size: 1120px auto;
-  background-repeat: repeat;
-  background-position: top left;
-  opacity: 0.28;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  z-index: 0;
-}
-@media (min-width: 720px) {
-  body::before { background-size: 1800px auto; }
-}
-
-button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
-
-.topbar {
-  position: sticky; top: 0; z-index: 30;
-  background: rgba(12, 8, 7, 0.78);
-  backdrop-filter: saturate(140%) blur(8px);
-  -webkit-backdrop-filter: saturate(170%) blur(16px);
-  border-bottom: 1px solid var(--line);
-  isolation: isolate;
-  overflow: hidden;
-}
+body::before,
 .topbar::after {
   content: '';
   position: absolute;
@@ -84,14 +55,27 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
   background-size: 1120px auto;
   background-repeat: repeat;
   background-position: top left;
-  opacity: 0.32;
   mix-blend-mode: screen;
-  filter: blur(2px);
   pointer-events: none;
   z-index: 0;
 }
+body::before { opacity: 0.28; }
+.topbar::after { opacity: 0.32; filter: blur(2px); }
 @media (min-width: 720px) {
+  body::before,
   .topbar::after { background-size: 1800px auto; }
+}
+
+button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(12, 8, 7, 0.78);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
 }
 .topbar__inner {
   position: relative; z-index: 1;
@@ -245,7 +229,15 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
   pointer-events: none;
   display: none;
 }
-.block--starred .block__star { display: inline; }
+.block--starred .block__star { display: inline-flex; align-items: center; }
+.block__star--palm {
+  width: 15px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask: url('./assets/palm.svg') center / contain no-repeat;
+          mask: url('./assets/palm.svg') center / contain no-repeat;
+}
+.block--starred .block__star--palm { display: inline-block; }
 
 .block__tags {
   display: flex; align-items: center; gap: 4px;
@@ -360,7 +352,9 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
 }
 .details__close {
   flex: 0 0 auto; width: 32px; height: 32px;
-  background: var(--bg-elev-2); color: var(--text-dim); font-size: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0; line-height: 1;
+  background: var(--bg-elev-2); color: var(--text-dim); font-size: 20px;
 }
 
 .details__facts {
@@ -396,7 +390,14 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
   transition: background .15s ease, border-color .15s ease, color .15s ease;
 }
 .details__star:hover { background: #2c2118; }
-.details__star-icon { font-size: 20px; line-height: 1; color: var(--text-faint); transition: color .15s ease; }
+.details__star-icon { font-size: 20px; line-height: 1; color: var(--text-faint); transition: color .15s ease; display: inline-flex; align-items: center; }
+.details__star--palm .details__star-icon {
+  width: 22px;
+  height: 26px;
+  background-color: currentColor;
+  -webkit-mask: url('./assets/palm.svg') center / contain no-repeat;
+          mask: url('./assets/palm.svg') center / contain no-repeat;
+}
 .details__star--on,
 .details__star--on:hover,
 .details__star--on:active {

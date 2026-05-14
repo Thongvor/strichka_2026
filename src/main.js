@@ -55,17 +55,18 @@ async function boot() {
   });
 
   const onBlockClick = (perf) => details.open(perf);
+  let nowLoop;
   const setActiveDay = (id) => {
     activeDayId = id;
     renderDayTabs(els.daytabs, festival, activeDayId, setActiveDay);
     renderGrid(els.grid, festival, activeDayId, { onBlockClick, favorites });
-    nowLoop.refresh();
+    nowLoop?.refresh();
   };
 
   renderDayTabs(els.daytabs, festival, activeDayId, setActiveDay);
   renderGrid(els.grid, festival, activeDayId, { onBlockClick, favorites });
 
-  const nowLoop = startNowLoop({
+  nowLoop = startNowLoop({
     festival,
     getActiveDay: () => festival.days.find((d) => d.id === activeDayId),
     viewport: els.viewport,
