@@ -1,4 +1,4 @@
-export const HOUR_PX = 60;
+export const HOUR_PX = 76;
 
 const KYIV_FORMATTER = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'Europe/Kyiv',
