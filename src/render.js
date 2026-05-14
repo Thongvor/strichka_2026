@@ -1,4 +1,4 @@
-import { HOUR_PX, pxFromMinutes, formatKyivTime } from './time.js';
+import { HOUR_PX, pxFromMinutes, formatKyivTime, kyivHourMinute } from './time.js';
 
 export function renderDayTabs(host, festival, activeDayId, onChange) {
   host.innerHTML = '';
@@ -131,9 +131,10 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   name.className = 'block__name';
   name.textContent = perf.artist;
   head.appendChild(name);
+  const palm = isPalmArtist(perf.artist);
   const star = document.createElement('span');
-  star.className = 'block__star';
-  star.textContent = '★';
+  star.className = palm ? 'block__star block__star--palm' : 'block__star';
+  if (!palm) star.textContent = '★';
   star.setAttribute('aria-hidden', 'true');
   head.appendChild(star);
   block.appendChild(head);
@@ -167,15 +168,8 @@ function buildBlock(perf, day, onBlockClick, favorites) {
 }
 
 function startMinutesInKyiv(date) {
-  const parts = new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Europe/Kyiv',
-    hour12: false,
-    hour: '2-digit',
-    minute: '2-digit',
-  }).formatToParts(date);
-  const h = Number(parts.find((p) => p.type === 'hour').value);
-  const m = Number(parts.find((p) => p.type === 'minute').value);
-  return h * 60 + m;
+  const { hour, minute } = kyivHourMinute(date);
+  return hour * 60 + minute;
 }
 
 function buildNowLine() {
@@ -185,6 +179,11 @@ function buildNowLine() {
   line.hidden = true;
   return line;
 }
+
+export function isPalmArtist(name) {
+  return typeof name === 'string' && name.trim().toLowerCase() === 'thongvor';
+}
+
 
 function groupBy(items, key) {
   const map = new Map();

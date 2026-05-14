@@ -5,7 +5,7 @@ const TICK_MS = 30_000;
 export function startNowLoop({ festival, getActiveDay, viewport, chip }) {
   let intersectionObserver = null;
   let chipScrollTarget = null;
-  let lastLineId = null;
+  let lastLine = null;
 
   function attachChipObserver(line) {
     if (intersectionObserver) intersectionObserver.disconnect();
@@ -26,9 +26,9 @@ export function startNowLoop({ festival, getActiveDay, viewport, chip }) {
     const day = getActiveDay();
     const line = document.getElementById('now-line');
     const pill = document.getElementById('now-time');
-    if (line && line !== lastLineId) {
+    if (line && line !== lastLine) {
       attachChipObserver(line);
-      lastLineId = line;
+      lastLine = line;
     }
 
     document.querySelectorAll('.block--now, .block--past').forEach((el) => {

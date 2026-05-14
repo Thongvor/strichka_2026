@@ -1,4 +1,5 @@
 import { formatKyivTime } from './time.js';
+import { isPalmArtist } from './render.js';
 
 export function setupDetails({
   dialog,
@@ -14,6 +15,7 @@ export function setupDetails({
   favorites,
 }) {
   let currentPerf = null;
+  const starIcon = starBtn.querySelector('.details__star-icon');
 
   function refreshStar() {
     if (!currentPerf) return;
@@ -31,6 +33,11 @@ export function setupDetails({
     const end = new Date(perf.end);
 
     artistEl.textContent = perf.artist;
+    if (starIcon) {
+      const palm = isPalmArtist(perf.artist);
+      starIcon.textContent = palm ? '' : '★';
+      starBtn.classList.toggle('details__star--palm', palm);
+    }
     stageEl.textContent = stage ? stage.name : perf.stageId;
     timeEl.textContent = `${day ? day.label : ''} · ${formatKyivTime(start)} – ${formatKyivTime(end)}`;
 
