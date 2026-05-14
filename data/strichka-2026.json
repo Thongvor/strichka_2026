@@ -47,7 +47,7 @@
             "date": "2026-05-17",
             "startHour": 9,
             "endHour": 23,
-            "stages": ["dvir", "otel", "garden", "third-floor", "lisnyi-prychal"]
+            "stages": ["dvir", "otel", "garden", "lisnyi-prychal"]
         }
     ],
     "performances": [
@@ -135,7 +135,7 @@
             "artist": "Paul Thompson",
             "stageId": "mezzanine",
             "dayId": "day1",
-            "country": "GB",
+            "country": "UK",
             "start": "2026-05-16T14:00:00+03:00",
             "end": "2026-05-16T17:00:00+03:00"
         },
@@ -308,7 +308,7 @@
             "stageId": "dvir",
             "dayId": "day2",
             "start": "2026-05-17T13:00:00+03:00",
-            "end": "2026-05-17T14:00:00+03:00"
+            "end": "2026-05-17T15:00:00+03:00"
         },
         {
             "id": "d2-dvir-2",
@@ -316,7 +316,7 @@
             "stageId": "dvir",
             "dayId": "day2",
             "country": "IT",
-            "start": "2026-05-17T14:00:00+03:00",
+            "start": "2026-05-17T15:00:00+03:00",
             "end": "2026-05-17T17:30:00+03:00"
         },
         {
@@ -335,6 +335,86 @@
             "country": "DE",
             "start": "2026-05-17T20:00:00+03:00",
             "end": "2026-05-17T22:00:00+03:00"
+        },
+        {
+            "id": "d1-otel-1",
+            "artist": "Lisovskyi",
+            "stageId": "otel",
+            "dayId": "day1",
+            "start": "2026-05-16T14:00:00+03:00",
+            "end": "2026-05-16T17:30:00+03:00"
+        },
+        {
+            "id": "d1-otel-2",
+            "artist": "Alpha Centauri",
+            "stageId": "otel",
+            "dayId": "day1",
+            "live": true,
+            "start": "2026-05-16T17:30:00+03:00",
+            "end": "2026-05-16T18:30:00+03:00"
+        },
+        {
+            "id": "d1-otel-3",
+            "artist": "Credit00",
+            "stageId": "otel",
+            "dayId": "day1",
+            "country": "DE",
+            "live": true,
+            "start": "2026-05-16T18:30:00+03:00",
+            "end": "2026-05-16T19:30:00+03:00"
+        },
+        {
+            "id": "d1-otel-4",
+            "artist": "Alex Savage & Shults.Sashaa",
+            "stageId": "otel",
+            "dayId": "day1",
+            "start": "2026-05-16T19:30:00+03:00",
+            "end": "2026-05-16T22:30:00+03:00"
+        },
+        {
+            "id": "d2-otel-1",
+            "artist": "Trippsy",
+            "stageId": "otel",
+            "dayId": "day2",
+            "country": "LT",
+            "start": "2026-05-17T15:00:00+03:00",
+            "end": "2026-05-17T17:30:00+03:00"
+        },
+        {
+            "id": "d2-otel-2",
+            "artist": "Lostlojic",
+            "stageId": "otel",
+            "dayId": "day2",
+            "live": true,
+            "start": "2026-05-17T17:30:00+03:00",
+            "end": "2026-05-17T18:30:00+03:00"
+        },
+        {
+            "id": "d2-otel-3",
+            "artist": "PRZ",
+            "stageId": "otel",
+            "dayId": "day2",
+            "country": "DE",
+            "live": true,
+            "start": "2026-05-17T18:30:00+03:00",
+            "end": "2026-05-17T19:30:00+03:00"
+        },
+        {
+            "id": "d2-otel-4",
+            "artist": "Elija",
+            "stageId": "otel",
+            "dayId": "day2",
+            "live": true,
+            "start": "2026-05-17T19:30:00+03:00",
+            "end": "2026-05-17T20:30:00+03:00"
+        },
+        {
+            "id": "d2-otel-5",
+            "artist": "Monotronique",
+            "stageId": "otel",
+            "dayId": "day2",
+            "start": "2026-05-17T20:30:00+03:00",
+            "end": "2026-05-17T22:30:00+03:00"
         }
     ]
 }
