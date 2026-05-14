@@ -184,9 +184,9 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
     repeating-linear-gradient(
       to bottom,
       transparent 0,
-      transparent 75px,
-      rgba(255, 255, 255, 0.03) 75px,
-      rgba(255, 255, 255, 0.03) 76px
+      transparent 95px,
+      rgba(255, 255, 255, 0.03) 95px,
+      rgba(255, 255, 255, 0.03) 96px
     );
 }
 .grid__stage-col:last-of-type { border-right: 0; }
@@ -209,6 +209,8 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
 }
 .block:hover { background: rgba(44, 33, 24, 0.88); }
 .block:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.block--info { cursor: default; }
+.block--info:hover { background: rgba(36, 27, 21, 0.78); }
 
 .block__head {
   display: flex; align-items: center; justify-content: space-between; gap: 6px;

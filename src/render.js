@@ -117,10 +117,11 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   const top = pxFromMinutes(startMinFromMidnight - dayStartMin);
   const height = Math.max(24, pxFromMinutes(endMinFromMidnight - startMinFromMidnight) - 1);
 
-  const block = document.createElement('button');
-  block.type = 'button';
-  block.className = 'block';
-  if (favorites?.has(perf.id)) block.classList.add('block--starred');
+  const interactive = !perf.noDetails;
+  const block = document.createElement(interactive ? 'button' : 'div');
+  if (interactive) block.type = 'button';
+  block.className = interactive ? 'block' : 'block block--info';
+  if (interactive && favorites?.has(perf.id)) block.classList.add('block--starred');
   block.style.top = `${top}px`;
   block.style.height = `${height}px`;
   block.dataset.performanceId = perf.id;
@@ -131,12 +132,14 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   name.className = 'block__name';
   name.textContent = perf.artist;
   head.appendChild(name);
-  const palm = isPalmArtist(perf.artist);
-  const star = document.createElement('span');
-  star.className = palm ? 'block__star block__star--palm' : 'block__star';
-  if (!palm) star.textContent = '★';
-  star.setAttribute('aria-hidden', 'true');
-  head.appendChild(star);
+  if (interactive) {
+    const palm = isPalmArtist(perf.artist);
+    const star = document.createElement('span');
+    star.className = palm ? 'block__star block__star--palm' : 'block__star';
+    if (!palm) star.textContent = '★';
+    star.setAttribute('aria-hidden', 'true');
+    head.appendChild(star);
+  }
   block.appendChild(head);
 
   const showCountry = perf.country && perf.country !== 'UA';
@@ -163,7 +166,7 @@ function buildBlock(perf, day, onBlockClick, favorites) {
   time.textContent = `${formatKyivTime(start)} – ${formatKyivTime(end)}`;
   block.appendChild(time);
 
-  block.addEventListener('click', () => onBlockClick(perf));
+  if (interactive) block.addEventListener('click', () => onBlockClick(perf));
   return block;
 }
 
