@@ -52,8 +52,8 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('./assets/motifs.png');
-  background-size: 560px auto;
+  background-image: url('./assets/motifs-brick.png');
+  background-size: 1120px auto;
   background-repeat: repeat;
   background-position: top left;
   opacity: 0.28;
@@ -62,7 +62,7 @@ body::before {
   z-index: 0;
 }
 @media (min-width: 720px) {
-  body::before { background-size: 900px auto; }
+  body::before { background-size: 1800px auto; }
 }
 
 button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
@@ -70,11 +70,31 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
 .topbar {
   position: sticky; top: 0; z-index: 30;
   background: rgba(12, 8, 7, 0.78);
-  backdrop-filter: saturate(160%) blur(8px);
-  -webkit-backdrop-filter: saturate(160%) blur(8px);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(170%) blur(16px);
   border-bottom: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
+}
+.topbar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/motifs-brick.png');
+  background-size: 1120px auto;
+  background-repeat: repeat;
+  background-position: top left;
+  opacity: 0.32;
+  mix-blend-mode: screen;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+@media (min-width: 720px) {
+  .topbar::after { background-size: 1800px auto; }
 }
 .topbar__inner {
+  position: relative; z-index: 1;
   display: flex; align-items: center; justify-content: flex-start;
   padding: 14px 16px 6px;
 }
@@ -90,6 +110,7 @@ button { font: inherit; color: inherit; background: transparent; border: 0; curs
   overflow-x: auto; scrollbar-width: none;
   align-items: flex-end;
   position: relative;
+  z-index: 1;
 }
 .daytabs::after {
   content: '';
