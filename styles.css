@@ -52,7 +52,7 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('./assets/motifs.png');
+  background-image: url('./assets/motifs-brick.png');
   background-size: 560px auto;
   background-repeat: repeat;
   background-position: top left;
