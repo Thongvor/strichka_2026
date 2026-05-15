@@ -169,7 +169,7 @@
         },
         {
             "id": "d2-garden-1",
-            "artist": "Udjin",
+            "artist": "Domnitsa",
             "stageId": "garden",
             "dayId": "day2",
             "country": "UA",
@@ -205,10 +205,10 @@
         },
         {
             "id": "d2-lp-2",
-            "artist": "Maxime dB",
+            "artist": "Gee Lane",
             "stageId": "lisnyi-prychal",
             "dayId": "day2",
-            "country": "FR",
+            "country": "VE",
             "start": "2026-05-17T13:00:00+03:00",
             "end": "2026-05-17T16:00:00+03:00"
         },
@@ -233,7 +233,7 @@
         },
         {
             "id": "d2-lp-5",
-            "artist": "Tau Car",
+            "artist": "Maxime dB",
             "stageId": "lisnyi-prychal",
             "dayId": "day2",
             "country": "FR",
